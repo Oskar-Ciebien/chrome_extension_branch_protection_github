@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GitHub Pull Request Branch Controller</title>
+    <script src="options.js"></script>
+  </head>
+  <body>
+    <h2>GitHub Pull Request Branch Controller</h2>
+
+    <form id="optionsForm">
+      <label for="branchName">Branch Name:</label>
+      <input
+        type="text"
+        id="branchName"
+        name="branchName"
+        placeholder="Enter branch name"
+      />
+
+      <label for="mergeType">Merge Type to Disable:</label>
+      <select id="mergeType" name="mergeType">
+        <option value="merge">Merge Commit</option>
+        <option value="squash">Squash Merge</option>
+        <option value="rebase">Rebase</option>
+      </select>
+
+      <button type="submit">Add</button>
+    </form>
+
+    <h3>Current Options:</h3>
+    <ul id="currentOptions"></ul>
+  </body>
+</html>

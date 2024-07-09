@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Pull Request Branch Controller",
+  "description": "A Chrome Extension to disable certain merges on GitHub Pull Requests",
+  "version": "1.0.0",
+  "author": "Oskar Ciebien",
+  "omnibox": {
+    "keyword": "@@"
+  },
+  "permissions": ["storage"],
+  "options_page": "options/options.html",
+  "content_scripts": [
+    {
+      "matches": ["*://github.com/*/pull/*"],
+      "js": ["content_scripts/index.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
